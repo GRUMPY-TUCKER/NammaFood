@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+.card {
+    font-family: 'Roboto', sans-serif; /* Use Roboto for the card body */
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-family: 'Poppins', sans-serif; /* Use Poppins for the title */
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+}
+
+.card-footer .btn {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.card-footer .btn-primary {
+    background-color: #ff5722; /* Change to a vibrant orange */
+    border-color: #ff5722; /* Match the border color */
+    color: white; /* Ensure text is visible */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.card-footer .btn-primary:hover {
+    background-color: #e64a19; /* Darker orange on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.card-footer .btn-outline-secondary {
+    color: #4caf50; /* Change to green */
+    border-color: #4caf50; /* Match the border color */
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.card-footer .btn-outline-secondary:hover {
+    color: white; /* Change text color on hover */
+    background-color: #4caf50; /* Green background on hover */
+    border-color: #4caf50; /* Match the border color */
+}
+
+.card-footer {
+    background: linear-gradient(90deg, #252c07, #fefefe);
+    color: white;
+    border-top: none;
+}

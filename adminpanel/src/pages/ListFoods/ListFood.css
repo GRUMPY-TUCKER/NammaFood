@@ -1,0 +1,92 @@
+/* Use a beautiful font and modern table style */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+.container, .card {
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+.card {
+    border-radius: 24px;
+    box-shadow: 0 12px 36px rgba(67,160,71,0.13), 0 2px 4px rgba(0,0,0,0.04);
+    border: 3px solid #43a047;
+    background: linear-gradient(120deg, #f8fffc 60%, #e0f7fa 100%);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.table, .table th, .table td, .table thead, .table tbody, .table tr {
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif !important;
+}
+
+.table {
+    border-radius: 18px;
+    overflow: hidden;
+    background: #f8f9fa;
+    margin-bottom: 0;
+    font-size: 1.12rem;
+    box-shadow: 0 4px 18px rgba(67,160,71,0.07);
+}
+
+.table thead {
+    background: linear-gradient(90deg, #43a047 60%, #feca57 100%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.13rem;
+    letter-spacing: 0.5px;
+}
+
+.table th, .table td {
+    padding: 16px 12px;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+}
+
+.table th {
+    border-bottom: 3px solid #43a047;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #e8f5e9;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: #fffde7;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(67,160,71,0.10);
+}
+
+img {
+    border-radius: 14px;
+    border: 2px solid #43a047;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(67,160,71,0.10);
+    transition: transform 0.2s;
+}
+img:hover {
+    transform: scale(1.08);
+    border-color: #ff6b6b;
+}
+
+.bi-x-circle-fill {
+    transition: transform 0.15s, color 0.15s;
+    font-size: 1.5rem;
+}
+.bi-x-circle-fill:hover {
+    transform: scale(1.25) rotate(-10deg);
+    color: #ff1744 !important;
+    text-shadow: 0 2px 8px #ffbaba;
+}
+
+h1.text-center {
+    font-family: 'Montserrat', 'Times New Roman', serif;
+    font-weight: 800;
+    color: #43a047;
+    letter-spacing: 1.5px;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 8px #e0f2f1;
+    background: linear-gradient(90deg, #43a047 60%, #feca57 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

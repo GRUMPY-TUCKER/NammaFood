@@ -1,0 +1,44 @@
+.logo {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+    border: 2px solid rgb(0, 255, 170);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.cart {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+    border: 2px solid rgb(0, 255, 170);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.menubar-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.active{
+    color: tomato !important;
+}
+
+.dropdown-menu li{
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}

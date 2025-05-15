@@ -1,0 +1,110 @@
+/* General Page Styling */
+.container {
+  background: linear-gradient(135deg, #21e752, #e9ecef); /* Light gradient background */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart Item Styling */
+.cart-item img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to images */
+}
+
+.quantity-input {
+  width: 50px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+}
+
+/* Order Summary Styling */
+.cart-summary {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa); /* Gradient background */
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.cart-summary .card-title {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.cart-summary button {
+  background-color: #18d63e;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s;
+  border-radius: 8px;
+}
+
+.cart-summary button:hover {
+  background-color: #af0d33;
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Promo Code Styling */
+.card.mt-4 {
+  background: linear-gradient(135deg, #f8f9fa, #ffffff); /* Gradient background */
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card.mt-4 .btn-outline-secondary {
+  border-color: #007bff;
+  color: #10c60d;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 8px;
+}
+
+.card.mt-4 .btn-outline-secondary:hover {
+  background-color: #05b71a;
+  color: white;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Buttons */
+.btn-outline-primary {
+  border-color: #007bff;
+  color: #22ac34;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #bd185a;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .cart-summary {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}

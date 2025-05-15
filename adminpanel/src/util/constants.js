@@ -1,0 +1,1 @@
+export const API_BASE_URI = 'http://129.151.47.104/foodies';

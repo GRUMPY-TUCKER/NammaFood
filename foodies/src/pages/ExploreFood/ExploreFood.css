@@ -1,0 +1,31 @@
+/* Make the search bar oval-shaped */
+.search-bar .search-input {
+    border-radius: 50px 0 0 50px; /* Rounded left corners */
+    border-right: none; /* Remove right border to merge with the button */
+  }
+  
+  .search-bar .search-button {
+    border-radius: 0 50px 50px 0; /* Rounded right corners */
+    border-left: none; /* Remove left border to merge with the input */
+  }
+  
+  .search-bar .form-select {
+    border-radius: 50px; /* Make the dropdown oval-shaped */
+  }
+  
+  .search-bar .search-input,
+  .search-bar .search-button,
+  .search-bar .form-select {
+    height: 50px; /* Increase height for better appearance */
+  }
+  .search-tab {
+    border: 2px solid #28a745; /* Green border */
+    border-radius: 50px; /* Make it rounded */
+    padding: 5px; /* Add some padding inside the border */
+    background-color: #f8f9fa; /* Optional: Light background */
+  }
+  
+  .search-tab:focus-within {
+    border-color: #007bff; /* Change border color to blue when focused */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Add a glow effect */
+  }

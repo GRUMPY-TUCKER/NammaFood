@@ -1,0 +1,52 @@
+/* Background and Section Styling */
+.food-details {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 12px;
+    padding: 40px 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Typography */
+  .food-details h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .food-details .lead {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* Image Styling */
+  .food-image {
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .food-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Button Styling */
+  .food-details .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .food-details .btn-success:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+  }
+  
+  /* Badge Styling */
+  .food-details .badge {
+    font-size: 0.9rem;
+    padding: 0.5em 0.75em;
+    border-radius: 8px;
+  }

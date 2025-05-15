@@ -1,0 +1,30 @@
+.login-container {
+    background-image: url("../../assets/login.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-login {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+}
+
+.btn-google {
+  color: rgb(230, 11, 11) !important;
+  background-color: #ea4335;
+  border: 1px solid #ea4335 !important;
+  border-radius: 0.25rem !important;
+  font-size: 0.9rem !important;
+  letter-spacing: 0.05rem !important;
+}
+
+.btn-google:hover {
+  background-color: #ea4335 !important;
+  border: 1px solid #ea4335 !important;
+  color: white !important;
+}

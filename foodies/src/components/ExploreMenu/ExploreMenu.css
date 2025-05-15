@@ -1,0 +1,81 @@
+.explore-menu {
+    margin-top: 48px;      /* Increase top margin */
+    padding-top: 40px;     /* Add more padding at the top */
+    padding-bottom: 24px;  /* Optional: add bottom padding for balance */
+}
+
+.explore-menu-list::-webkit-scrollbar{
+    display: none;
+}
+.explore-menu-list {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 20px; /* Add horizontal padding */
+    margin-top: 16px; /* Add some space above the list */
+    gap: 16px; /* Space between items */
+    scrollbar-width: none; /* For Firefox */
+    overflow: hidden; /* Fallback for unsupported browsers */
+    -webkit-scrollbar {
+        display: none; /* For WebKit-based browsers */
+    }
+}
+.explore-menu-item {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 32px 20px 24px 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid #e0e0e0;
+    min-width: 180px;
+    overflow: visible;
+}
+
+.explore-menu-item:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.16);
+    border-color: #00c896;
+    cursor: pointer;
+}
+
+.explore-menu-item img {
+    border: 4px solid #d10f23;
+    box-shadow: 0 2px 8px rgba(0,200,150,0.12);
+    transition: border-color 0.2s;
+    background: #f8f9fa;
+}
+
+.explore-menu-item:hover img {
+    border-color: #ff9800;
+    box-shadow: 0 4px 16px rgba(0,200,150,0.16);
+}
+
+.scroll-icon{
+    font-size : 24px;
+    color : #dc0b12;
+    margin-top : 8px;
+    margin-bottom : 8px;
+    margin-left : 8px;
+    margin-right : 8px;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+.scroll-icon:hover{
+    transform: scale(1.2);
+    color : #ff9800;
+}
+
+.explore-menu hr{
+    border: 0;
+    height: 1px;
+    background-color: #b95d5d;
+    margin: 16px 0; /* Add some space above and below the line */
+}
+
+.explore-menu list-item.active{
+    background-color: #00c896; /* Change the background color of the active item */
+    color: #fff; /* Change the text color of the active item */
+    border-radius: 16px; /* Ensure the active item has rounded corners */
+    padding: 32px 20px 24px 20px; /* Ensure padding is consistent with other items */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08); /* Add shadow for depth */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effect */
+}
