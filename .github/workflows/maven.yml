@@ -45,7 +45,7 @@ jobs:
           # Build Docker image and deploy
           docker build --platform linux/arm64 -t GRUMPY-TUCKER/foodiesapi-backend:${{ github.sha }} .
 
-          docker run -d -p 8085:8080  -e "debug=true" -e "logging.level.root=INFO" --name foodiesapi-backend GRUMPY-TUCKER/foodiesapi-backend:${{ github.sha }}
+          docker run -d -p 8085:8080 --network foodies -e "debug=true" -e "logging.level.root=INFO" --name foodiesapi-backend GRUMPY-TUCKER/foodiesapi-backend:${{ github.sha }}
 
           # Cleanup
           cd ../../..
