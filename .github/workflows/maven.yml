@@ -40,7 +40,7 @@ jobs:
           
           
           # Build with Maven
-          mvn clean install -DskipTests -s .github/settings.xml
+          mvn clean install -DskipTests
           
           # Build Docker image and deploy
           docker build --platform linux/arm64 -t GRUMPY-TUCKER/foodiesapi-backend:${{ github.sha }} .
