@@ -1,0 +1,74 @@
+name: Maven Build and Deploy to Non Prod
+
+on:
+  workflow_dispatch:
+concurrency:
+  group: deploy-${{ github.ref_name }}
+  cancel-in-progress: true 
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    # Fetch the default branch name (main in this case)
+    - name: Set default branch to 'main'
+      run: |
+        echo "branch_name=main" >> $GITHUB_ENV
+
+    - name: Build Deploy Docker container in server (via SSH)
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.DEVELOP_SERVER_HOST }}
+        username: ${{ secrets.DEVELOP_SERVER_USERNAME }}
+        key: ${{ secrets.DEVELOP_SSH_PRIVATE_KEY }}
+        port: 22
+        script: |
+          # Stop and clean old docker image
+          docker stop foodiesapi-backend || true
+          docker rm foodiesapi-backend || true
+          docker images --format '{{.Repository}}:{{.Tag}} {{.ID}}' | grep -v ":${{ github.sha }}" | awk '{print $2}' | xargs -r docker rmi
+          
+          # Clone and Cd AuthService Develop
+          rm -rf main-deployment
+          mkdir main-deployment
+          cd main-deployment
+          git clone https://${{ secrets.BRAINLEA_GH_PAT }}@github.com/GRUMPY-TUCKER/NammaFood.git
+          cd NammaFood/foodiesapi-backend
+          git checkout -b main remotes/origin/main
+          git clone https://${{ secrets.BRAINLEA_GH_PAT }}@github.com/GRUMPY-TUCKER/foodies-credentials.git
+          
+          
+          # Build with Maven
+          mvn clean install -DskipTests -s .github/settings.xml
+          
+          # Build Docker image and deploy
+          docker build --platform linux/arm64 -t GRUMPY-TUCKER/foodiesapi-backend:${{ github.sha }} .
+
+          docker run -d -p 8085:8080  -e "debug=true" -e "logging.level.root=INFO" --name foodiesapi-backend GRUMPY-TUCKER/foodiesapi-backend:${{ github.sha }}
+
+          # Cleanup
+          cd ../../..
+          rm -rf main-deployment
+    - name: Set commit status
+      if: always()
+      run: |
+        COMMIT_SHA=$(git rev-parse HEAD)
+        echo "Setting status for commit: $COMMIT_SHA"
+        
+        # Determine the status based on the result of the previous steps
+        BUILD_STATUS="success"
+        if [ "${{ job.status }}" != "success" ]; then
+          BUILD_STATUS="failure"
+        fi
+
+        # Use GitHub's API to set the commit status
+        curl -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/${{ github.repository }}/statuses/$COMMIT_SHA \
+          -d "{
+            \"state\": \"${BUILD_STATUS}\",
+            \"description\": \"Build ${BUILD_STATUS}\",
+            \"context\": \"CI Status\",
+            \"target_url\": \"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\"
+          }"
