@@ -33,10 +33,10 @@ jobs:
           rm -rf main-deployment
           mkdir main-deployment
           cd main-deployment
-          git clone https://${{ secrets.BRAINLEA_GH_PAT }}@github.com/GRUMPY-TUCKER/NammaFood.git
+          git clone https://${{ secrets.GH_PAT }}@github.com/GRUMPY-TUCKER/NammaFood.git
           cd NammaFood/foodiesapi-backend
           git checkout -b main remotes/origin/main
-          git clone https://${{ secrets.BRAINLEA_GH_PAT }}@github.com/GRUMPY-TUCKER/foodies-credentials.git
+          git clone https://${{ secrets.GH_PAT }}@github.com/GRUMPY-TUCKER/foodies-credentials.git
           
           
           # Build with Maven
