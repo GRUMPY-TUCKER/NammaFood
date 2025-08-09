@@ -1,4 +1,5 @@
 HELP.md
+foodies-credentials
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
