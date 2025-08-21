@@ -33,7 +33,7 @@ Clone this repository or download the ZIP and extract it:
 git clone https://github.com/GRUMPY-TUCKER/NammaFood.git
 cd namma-food
 ```
-###2️⃣ Backend Setup (Spring Boot)
+2️⃣ Backend Setup (Spring Boot)
 
 Navigate to the backend folder and update credentials:
 
@@ -59,4 +59,56 @@ docker run -p 8080:8080 nammafood-backend
 Backend will start at:
 ```bash
 👉 http://localhost:8080
+```
+
+3️⃣ Frontend Setup (React.js / Vue.js)
+
+Navigate to frontend folder:
+
+```bash
+cd frontend
+npm install
+npm run dev
+
+```
+Frontend will start at:
+```bash
+👉 http://localhost:5173 (React + Vite default)
+👉 http://localhost:3000 (if using CRA / Vue setup)
+```
+4️⃣ Access Application
+
+Open frontend in browser (http://localhost:5173)
+
+Backend API will be served from (http://localhost:8080)
+
+Ensure backend is running before starting frontend.
+
+🧪 Testing Credentials
+
+Create dummy users via registration.
+
+Admin account can be seeded manually in DB (MongoDB).
+
+Use Razorpay test keys for payment gateway testing.
+
+📌 Notes
+
+Update AWS_ACCESS_KEY, AWS_SECRET_KEY, and RAZORPAY_API_KEY before deploying.
+
+For production deployment, configure Docker Compose for frontend + backend.
+
+MongoDB can be connected either locally or via a cloud cluster (MongoDB Atlas).
+
+🌟 Future Improvements
+
+Add Recommendation Engine for personalized food suggestions.
+
+Multi-language support for inclusivity.
+
+Delivery tracking with Google Maps API.
+
+
+---
+
 
