@@ -32,8 +32,8 @@ Clone this repository or download the ZIP and extract it:
 ```bash
 git clone https://github.com/GRUMPY-TUCKER/NammaFood.git
 cd namma-food
-
-2️⃣ Backend Setup (Spring Boot)
+```
+###2️⃣ Backend Setup (Spring Boot)
 
 Navigate to the backend folder and update credentials:
 
@@ -44,18 +44,19 @@ Update your AWS credentials (for S3 storage / deployment).
 Update your Razorpay API Key & Secret.
 
 Run backend using:
-
+```bash
 ./mvnw spring-boot:run
-
+```
 
 (or import into IntelliJ/Eclipse and run).
 
 If using Docker (recommended for smooth setup):
-
+```bash
 docker build -t nammafood-backend .
 docker run -p 8080:8080 nammafood-backend
-
+```
 
 Backend will start at:
+```bash
 👉 http://localhost:8080
 
