@@ -33,32 +33,38 @@ This project helped me learn the **end-to-end software development lifecycle (SD
 - **Containerization**: Docker  
 
 ---
-## Repository Overview
+## 📁 Repository Overview
 
 NammaFood/
 ├─ .github/
 │ └─ workflows/
-│ └─ maven.yml
-├─ adminpanel/
+│ └─ maven.yml # GitHub Actions CI workflow for Maven build
+│
+├─ adminpanel/ # Admin dashboard (React)
 │ ├─ public/
 │ └─ src/
-│ ├─ components/
-│ └─ pages/
-├─ foodies/
+│ ├─ components/ # Reusable UI components
+│ └─ pages/ # Individual admin pages
+│
+├─ foodies/ # Customer-facing React app
 │ ├─ public/
 │ └─ src/
-│ ├─ components/
-│ ├─ pages/
-│ └─ service/
-├─ foodiesapi-backend/
+│ ├─ components/ # UI components for users
+│ ├─ pages/ # Page routes (Home, Cart, Orders, etc.)
+│ └─ service/ # API calls and utility functions
+│
+├─ foodiesapi-backend/ # Spring Boot backend (REST APIs)
 │ ├─ src/
-│ │ ├─ main/
-│ │ └─ test/
-│ ├─ mvnw
-│ └─ mvnw.cmd
+│ │ ├─ main/ # Application source code
+│ │ └─ test/ # Unit and integration tests
+│ ├─ mvnw # Maven wrapper (Unix)
+│ └─ mvnw.cmd # Maven wrapper (Windows)
+│
 ├─ foodies-credentials/
-│ └─ env.config.properties
-└─ .gitignore
+│ └─ env.config.properties # Environment configuration and secrets
+│
+└─ .gitignore # Ignored files and directories
+
 ---
 ## Prerequisites
 
