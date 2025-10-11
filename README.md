@@ -34,43 +34,43 @@ This project helped me learn the **end-to-end software development lifecycle (SD
 
 ---
 
-## 📁 Repository Overview
+## 🗂️ Repository Overview
 
 ```bash
-📂 NammaFood/
+📦 NammaFood/
 │
 ├── ⚙️ .github/
-│ └── 🔄 workflows/
-│ └── maven.yml — GitHub Actions CI workflow for Maven build
+│   └── 🔄 workflows/
+│       └── maven.yml              # 📸 GitHub Actions CI workflow for Maven build
 │
-├── 🔐 foodies-credentials/ — Environment configuration and secrets
-│ └── env.config.properties
+├── 🧠 adminpanel/                 # 🧩 Admin Dashboard (React)
+│   ├── 📂 public/
+│   └── 📂 src/
+│       ├── 🎨 components/         # ♻️ Reusable UI components
+│       └── 📄 pages/              # 📘 Individual admin pages
 │
-├── 👨‍💻 foodiesapi-backend/ — Spring Boot Backend (REST APIs)
-│ ├── 📂 src/
-│ │ ├── 🧠 main/ — Application source code
-│ │ └── 🧪 test/ — Unit and integration tests
-│ ├── 🪶 mvnw.cmd — Maven wrapper (Windows)
-│ ├── 🪶 mvnw — Maven wrapper (Unix)
-│ └── 🏗️ pom.xml — Maven build file
+├── 💻 foodies-frontend/           # 🍔 Customer-facing React App
+│   ├── 📂 public/
+│   └── 📂 src/
+│       ├── 🎨 components/         # ✨ UI components for users
+│       ├── 📄 pages/              # 📚 Page routes (Home, Cart, Orders, etc.)
+│       └── 🔧 service/            # 🌐 API calls and utility functions
 │
-├── 💻 foodies-frontend/ — Customer-facing React App
-│ ├── 📂 public/
-│ ├── 📂 src/
-│ │ ├── 🎨 components/ — UI components for users
-│ │ ├── 📄 pages/ — Page routes (Home, Cart, Orders, etc.)
-│ │ └── 🔧 service/ — API calls and utility functions
+├── 👨‍💻 foodiesapi-backend/        # 🚀 Spring Boot Backend (REST APIs)
+│   ├── 📂 src/
+│   │   ├── 🧠 main/               # 🪄 Application source code
+│   │   └── 🧪 test/               # 🧫 Unit and integration tests
+│   ├── 🪶 mvnw                    # 🪟 Maven wrapper (Unix)
+│   ├── 🪶 mvnw.cmd                # 🪟 Maven wrapper (Windows)
+│   └── 🏗️ pom.xml                 # ⚒️ Maven build file
 │
-├── 🧠 adminpanel/ — Admin Dashboard (React)
-│ ├── 📂 public/
-│ ├── 📂 src/
-│ │ ├── 🎨 components/ — Reusable UI components
-│ │ └── 📄 pages/ — Individual admin pages
+├── 🔐 foodies-credentials/        # 🗝️ Environment configuration and secrets
+│   └── 🧾 env.config.properties
 │
-├── 📜 .gitignore — Ignored files and directories
-└── 📦 README.md — Project documentation
+├── 📜 .gitignore                  # 🚫 Ignored files and directories
+└── 📘 README.md                   # 📝 Project documentation
 
-
+```
 ---
 
 ## Prerequisites
