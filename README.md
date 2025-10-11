@@ -6,6 +6,15 @@ This project helped me learn the **end-to-end software development lifecycle (SD
 
 ---
 
+## Quick overview
+
+- adminpanel — Vite React admin UI for managing food items and orders  
+- foodies — Vite React user app (explore, cart, orders, auth)  
+- foodiesapi-backend — Spring Boot backend (REST API, DB integration)  
+- foodies-credentials — environment properties used by backend
+
+---
+
 ## 🚀 Features
 - 👨‍💻 **Admin Panel** – Manage users, food items, and orders.  
 - 🍔 **User Portal** – Registration, login, ordering services, tracking.  
@@ -22,6 +31,75 @@ This project helped me learn the **end-to-end software development lifecycle (SD
 - **Payments**: Razorpay API Integration  
 - **Deployment**: AWS  
 - **Containerization**: Docker  
+
+---
+## Repository Overview
+
+NammaFood/
+├─ .github/
+│ └─ workflows/
+│ └─ maven.yml
+├─ adminpanel/
+│ ├─ public/
+│ └─ src/
+│ ├─ components/
+│ └─ pages/
+├─ foodies/
+│ ├─ public/
+│ └─ src/
+│ ├─ components/
+│ ├─ pages/
+│ └─ service/
+├─ foodiesapi-backend/
+│ ├─ src/
+│ │ ├─ main/
+│ │ └─ test/
+│ ├─ mvnw
+│ └─ mvnw.cmd
+├─ foodies-credentials/
+│ └─ env.config.properties
+└─ .gitignore
+---
+## Prerequisites
+
+- Node.js (LTS) and npm
+- Java 17 (or compatible with the project) or 21
+- Maven (or use the included Maven wrapper)
+- Git
+---
+
+## Local development
+
+1. Admin panel
+   - Open terminal (Windows)
+   - cd adminpanel
+   - npm install
+   - npm run dev
+
+2. User app (foodies)
+   - cd foodies
+   - npm install
+   - npm run dev
+
+3. Backend (Windows)
+   - cd foodiesapi-backend
+   - Use the wrapper:
+     - mvnw.cmd spring-boot:run
+   - Or with installed Maven:
+     - mvn spring-boot:run
+
+To build backend jar:
+- Windows: mvnw.cmd package
+- Then run: java -jar target/*.jar
+  
+---
+
+### Ports used (recommended)
+- Backend (Spring Boot): 8080
+- Frontend (foodies user): 5173 (Vite default)
+- Admin panel: 5174 (or another free port)
+
+You can change ports by editing Vite config or Spring Boot `server.port`.
 
 ---
 
@@ -73,7 +151,8 @@ npm run dev
 ```
 Frontend will start at:
 ```bash
-👉 http://localhost:5173 (React + Vite default)
+👉 http://localhost:5173 (React + Vite default) -- for frontend panel
+👉 http://localhost:5174 (React + Vite default) -- for adminpanel
 👉 http://localhost:3000 (if using CRA / Vue setup)
 ```
 4️⃣ Access Application
@@ -108,6 +187,14 @@ Multi-language support for inclusivity.
 
 Delivery tracking with Google Maps API.
 
+
+---
+
+## Security & best practices
+
+- Do NOT commit secrets, API keys, or passwords. Add `foodies-credentials/` to `.gitignore`.
+- Use environment-specific secrets management in production (Vault, cloud secret manager).
+- Regenerate JWT secret and API keys before deploying to production.
 
 ---
 
