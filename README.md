@@ -35,6 +35,8 @@ This project helped me learn the **end-to-end software development lifecycle (SD
 ---
 ## 📁 Repository Overview
 
+
+
 NammaFood/
 ├─ .github/
 │ └─ workflows/
@@ -64,6 +66,23 @@ NammaFood/
 │ └─ env.config.properties # Environment configuration and secrets
 │
 └─ .gitignore # Ignored files and directories
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 ## Prerequisites
