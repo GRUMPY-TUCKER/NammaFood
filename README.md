@@ -36,35 +36,39 @@ This project helped me learn the **end-to-end software development lifecycle (SD
 
 ## 📁 Repository Overview
 
-NammaFood/
-├─ 🧩 .github/
-│ └─ ⚙️ workflows/
-│ └─ maven.yml # 🧰 GitHub Actions CI workflow for Maven build
+📁 NammaFood/
 │
-├─ 🎛️ adminpanel/ # 🧠 Admin Dashboard (React)
-│ ├─ 📂 public/
-│ └─ 💻 src/
-│ ├─ 🧱 components/ # ♻️ Reusable UI components
-│ └─ 📄 pages/ # 📊 Individual admin pages
+├── ⚙️ .github/
+│   └── 🔄 workflows/
+│       └── maven.yml              # GitHub Actions CI workflow for Maven build
 │
-├─ 🍔 foodies/ # 🎨 Customer-facing React App
-│ ├─ 📂 public/
-│ └─ 💻 src/
-│ ├─ 🧱 components/ # 🪄 UI components for users
-│ ├─ 📄 pages/ # 🗺️ Page routes (Home, Cart, Orders, etc.)
-│ └─ 🔧 service/ # 🌐 API calls and utility functions
+├── 🔐 foodies-credentials/        # Environment configuration and secrets
+│   └── env.config.properties
 │
-├─ ⚙️ foodiesapi-backend/ # 💻 Spring Boot Backend (REST APIs)
-│ ├─ 🗂️ src/
-│ │ ├─ 🧠 main/ # 📦 Application source code
-│ │ └─ 🧪 test/ # 🧫 Unit and integration tests
-│ ├─ 🪶 mvnw # 🖥️ Maven wrapper (Unix)
-│ └─ 🪶 mvnw.cmd # 🪟 Maven wrapper (Windows)
+├── 👨‍💻 foodiesapi-backend/        # Spring Boot Backend (REST APIs)
+│   ├── 📂 src/
+│   │   ├── 🧠 main/                # Application source code
+│   │   └── 🧪 test/                # Unit and integration tests
+│   ├── 🪶 mvnw.cmd                # Maven wrapper (Windows)
+│   ├── 🪶 mvnw                    # Maven wrapper (Unix)
+│   └── 🏗️ pom.xml                 # Maven build file
 │
-├─ 🔐 foodies-credentials/
-│ └─ 🧾 env.config.properties # 🔒 Environment configuration and secrets
+├── 💻 foodies-frontend/           # Customer-facing React App
+│   ├── 📂 public/
+│   ├── 📂 src/
+│   │   ├── 🎨 components/         # UI components for users
+│   │   ├── 📄 pages/              # Page routes (Home, Cart, Orders, etc.)
+│   │   └── 🔧 service/            # API calls and utility functions
 │
-└─ 🚫 .gitignore # 🧹 Ignored files and directories
+├── 🧠 adminpanel/                 # Admin Dashboard (React)
+│   ├── 📂 public/
+│   ├── 📂 src/
+│   │   ├── 🎨 components/         # Reusable UI components
+│   │   └── 📄 pages/              # Individual admin pages
+│
+├── 📜 .gitignore                  # Ignored files and directories
+└── 📦 README.md                   # Project documentation
+
 
 
 ---
