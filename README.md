@@ -33,58 +33,42 @@ This project helped me learn the **end-to-end software development lifecycle (SD
 - **Containerization**: Docker  
 
 ---
+
 ## 📁 Repository Overview
 
-
-
 NammaFood/
-├─ .github/
-│ └─ workflows/
-│ └─ maven.yml # GitHub Actions CI workflow for Maven build
+├─ 🧩 .github/
+│ └─ ⚙️ workflows/
+│ └─ maven.yml # 🧰 GitHub Actions CI workflow for Maven build
 │
-├─ adminpanel/ # Admin dashboard (React)
-│ ├─ public/
-│ └─ src/
-│ ├─ components/ # Reusable UI components
-│ └─ pages/ # Individual admin pages
+├─ 🎛️ adminpanel/ # 🧠 Admin Dashboard (React)
+│ ├─ 📂 public/
+│ └─ 💻 src/
+│ ├─ 🧱 components/ # ♻️ Reusable UI components
+│ └─ 📄 pages/ # 📊 Individual admin pages
 │
-├─ foodies/ # Customer-facing React app
-│ ├─ public/
-│ └─ src/
-│ ├─ components/ # UI components for users
-│ ├─ pages/ # Page routes (Home, Cart, Orders, etc.)
-│ └─ service/ # API calls and utility functions
+├─ 🍔 foodies/ # 🎨 Customer-facing React App
+│ ├─ 📂 public/
+│ └─ 💻 src/
+│ ├─ 🧱 components/ # 🪄 UI components for users
+│ ├─ 📄 pages/ # 🗺️ Page routes (Home, Cart, Orders, etc.)
+│ └─ 🔧 service/ # 🌐 API calls and utility functions
 │
-├─ foodiesapi-backend/ # Spring Boot backend (REST APIs)
-│ ├─ src/
-│ │ ├─ main/ # Application source code
-│ │ └─ test/ # Unit and integration tests
-│ ├─ mvnw # Maven wrapper (Unix)
-│ └─ mvnw.cmd # Maven wrapper (Windows)
+├─ ⚙️ foodiesapi-backend/ # 💻 Spring Boot Backend (REST APIs)
+│ ├─ 🗂️ src/
+│ │ ├─ 🧠 main/ # 📦 Application source code
+│ │ └─ 🧪 test/ # 🧫 Unit and integration tests
+│ ├─ 🪶 mvnw # 🖥️ Maven wrapper (Unix)
+│ └─ 🪶 mvnw.cmd # 🪟 Maven wrapper (Windows)
 │
-├─ foodies-credentials/
-│ └─ env.config.properties # Environment configuration and secrets
+├─ 🔐 foodies-credentials/
+│ └─ 🧾 env.config.properties # 🔒 Environment configuration and secrets
 │
-└─ .gitignore # Ignored files and directories
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+└─ 🚫 .gitignore # 🧹 Ignored files and directories
 
 
 ---
+
 ## Prerequisites
 
 - Node.js (LTS) and npm
