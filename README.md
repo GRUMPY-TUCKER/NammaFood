@@ -36,6 +36,7 @@ This project helped me learn the **end-to-end software development lifecycle (SD
 
 ## 📁 Repository Overview
 
+```bash
 📂 NammaFood/
 │
 ├── ⚙️ .github/
