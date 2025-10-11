@@ -36,39 +36,38 @@ This project helped me learn the **end-to-end software development lifecycle (SD
 
 ## 📁 Repository Overview
 
-📁 NammaFood/
+📂 NammaFood/
 │
 ├── ⚙️ .github/
-│   └── 🔄 workflows/
-│       └── maven.yml              # GitHub Actions CI workflow for Maven build
+│ └── 🔄 workflows/
+│ └── maven.yml — GitHub Actions CI workflow for Maven build
 │
-├── 🔐 foodies-credentials/        # Environment configuration and secrets
-│   └── env.config.properties
+├── 🔐 foodies-credentials/ — Environment configuration and secrets
+│ └── env.config.properties
 │
-├── 👨‍💻 foodiesapi-backend/        # Spring Boot Backend (REST APIs)
-│   ├── 📂 src/
-│   │   ├── 🧠 main/                # Application source code
-│   │   └── 🧪 test/                # Unit and integration tests
-│   ├── 🪶 mvnw.cmd                # Maven wrapper (Windows)
-│   ├── 🪶 mvnw                    # Maven wrapper (Unix)
-│   └── 🏗️ pom.xml                 # Maven build file
+├── 👨‍💻 foodiesapi-backend/ — Spring Boot Backend (REST APIs)
+│ ├── 📂 src/
+│ │ ├── 🧠 main/ — Application source code
+│ │ └── 🧪 test/ — Unit and integration tests
+│ ├── 🪶 mvnw.cmd — Maven wrapper (Windows)
+│ ├── 🪶 mvnw — Maven wrapper (Unix)
+│ └── 🏗️ pom.xml — Maven build file
 │
-├── 💻 foodies-frontend/           # Customer-facing React App
-│   ├── 📂 public/
-│   ├── 📂 src/
-│   │   ├── 🎨 components/         # UI components for users
-│   │   ├── 📄 pages/              # Page routes (Home, Cart, Orders, etc.)
-│   │   └── 🔧 service/            # API calls and utility functions
+├── 💻 foodies-frontend/ — Customer-facing React App
+│ ├── 📂 public/
+│ ├── 📂 src/
+│ │ ├── 🎨 components/ — UI components for users
+│ │ ├── 📄 pages/ — Page routes (Home, Cart, Orders, etc.)
+│ │ └── 🔧 service/ — API calls and utility functions
 │
-├── 🧠 adminpanel/                 # Admin Dashboard (React)
-│   ├── 📂 public/
-│   ├── 📂 src/
-│   │   ├── 🎨 components/         # Reusable UI components
-│   │   └── 📄 pages/              # Individual admin pages
+├── 🧠 adminpanel/ — Admin Dashboard (React)
+│ ├── 📂 public/
+│ ├── 📂 src/
+│ │ ├── 🎨 components/ — Reusable UI components
+│ │ └── 📄 pages/ — Individual admin pages
 │
-├── 📜 .gitignore                  # Ignored files and directories
-└── 📦 README.md                   # Project documentation
-
+├── 📜 .gitignore — Ignored files and directories
+└── 📦 README.md — Project documentation
 
 
 ---
