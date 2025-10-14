@@ -13,6 +13,9 @@ This project helped me learn the **end-to-end software development lifecycle (SD
 - foodiesapi-backend — Spring Boot backend (REST API, DB integration)  
 - foodies-credentials — environment properties used by backend
 
+<img width="2420" height="1562" alt="NammaFood" src="https://github.com/user-attachments/assets/0c425802-eba8-41f2-9544-9f72ab203a64" />
+
+
 ---
 
 ## 🚀 Features
