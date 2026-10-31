@@ -31,8 +31,6 @@ public class EnvironmentDataConfig {
     private String razorpaySecret;
     @Value("${spring.jwt.secret.key}")
     private String JWT_SECRET_KEY;
-    @Value("${spring.data.mongodb.uri}")
-    private String mongodbUri;
     @Value("${spring.aws.s3.bucketname}")
     private String bucketName;
 

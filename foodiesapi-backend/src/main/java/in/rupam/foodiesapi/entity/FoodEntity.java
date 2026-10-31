@@ -1,22 +1,33 @@
 package in.rupam.foodiesapi.entity;
 
+import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 @Builder
 @Data
-@Document(collection = "foods")
+@Entity
+@Table(name = "foods")
 @AllArgsConstructor
 @NoArgsConstructor
 public class FoodEntity {
 
     @Id
-    private String id;  //extra
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String id;
+
+    @Column(nullable = false, length = 150)
     private String name;
+
+    @Column(length = 500)
     private String description;
+
+    @Column(nullable = false)
     private double price;
+
+    @Column(length = 120)
     private String category;
+
     @Setter
-    private String imageUrl; //extra
+    @Column(length = 500)
+    private String imageUrl;
 }
